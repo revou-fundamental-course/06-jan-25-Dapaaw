@@ -10,7 +10,6 @@
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-image: url(https://picsum.photos/200);
     background-size: cover;
 }
 
@@ -19,11 +18,11 @@ nav {
 }
 
 .left-rounded {
-    border-radius: 12px 0 0 12px;
+    border-radius: 9px 0 0 9px;
 }
 
 .right-rounded {
-    border-radius: 0 12px 12px 0;
+    border-radius: 0 9px 9px 0;
 }
 
 nav>a {
@@ -31,6 +30,11 @@ nav>a {
     padding: 8px;
     color: black;
     text-decoration: none;
+}
+
+nav>a:hover {
+    background-color: black;
+    color: white;
 }
 
 .banner-image {
