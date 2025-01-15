@@ -14,7 +14,7 @@
     <!-- Logo & Navigation -->
     <header class="main-header">
         <!-- Logo -->
-            <img class= "logo-icon" src="./Assets/Profil.png" alt="Profile" />
+        <img class="logo-icon" src="./Assets/Profil.png" alt="Profile" />
 
         <!-- Navigation -->
         <nav>
@@ -33,7 +33,7 @@
         <section>
             <!-- Title -->
             <header id="home-page">
-                <h1>Hi <span id="user-greeting">User</span>, Welcome to our website</h1>
+                <h1>Hi <span id="username">User</span>, Welcome to our website</h1>
                 <p>Lorem ipsum dolor sit amet adipiscing...</p>
             </header>
 
@@ -52,7 +52,7 @@
             <div class="content"></div>
         </section>
 
-        <!-- Portfolio -->
+        <!-- Portofolio -->
         <section>
             <!-- Title -->
             <header id="portfolio">
@@ -65,11 +65,52 @@
         <!-- Message Us -->
         <section>
             <!-- Title -->
+            <h1>Message Us</h1>
             <header id="message-us">
-                <h1>Message Us</h1>
-            </header>
+                <form onsubmit="return validateForm()">
 
-            <div class="content"></div>
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <input type="text" id="name" placeholder="Nama">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Tanggal Lahir:</label>
+                        <input type="date" id="dob">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin:</label>
+                        <input type="radio" name="gender" value="Laki-Laki" id="male">
+                        <label for="male">Laki-Laki</label>
+                        <input type="radio" name="gender" value="Perempuan" id="female">
+                        <label for="female">Perempuan</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" placeholder="Pesan"></textarea>
+                    </div>
+
+                    <div class="submit">
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </form>
+
+                <div class="output1">
+                    <div class="output2">
+                        <div id="output">
+                            <p>Current time: <span id="time"></span></p>
+                            <p>Nama: <span id="outputName"></span></p>
+                            <p>Tanggal Lahir: <span id="outputDob"></span></p>
+                            <p>Jenis Kelamin: <span id="outputGender"></span></p>
+                            <p>Pesan: <span id="outputMessage"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
         </section>
     </main>
 
@@ -79,6 +120,7 @@
     <footer>
         <p>&copy; 2025 - All rights reserved</p>
     </footer>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
