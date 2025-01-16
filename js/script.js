@@ -14,6 +14,32 @@ window.addEventListener('DOMContentLoaded', function() {
   gantiNama();
 });
 
+// Add this to your existing script.js
+document.addEventListener('DOMContentLoaded', function() {
+  const menuButton = document.querySelector('.tombol-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuButton.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      
+      // Optional: Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+          const isClickInside = menuButton.contains(event.target) || 
+                              navLinks.contains(event.target);
+          
+          if (!isClickInside && navLinks.classList.contains('active')) {
+              navLinks.classList.remove('active');
+          }
+      });
+  });
+
+  // Optional: Close menu when window is resized above mobile breakpoint
+  window.addEventListener('resize', function() {
+      if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+      }
+  });
+});
 
 function validateForm() {
   const name = document.getElementById('name').value;
